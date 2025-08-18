@@ -2,13 +2,13 @@
 
 <h1>What is HDR? Perceptual Impact of Luminance and Contrast in Immersive Displays</h1>
 
-[**Kenneth Chen**](https://yunxiangzhang.github.io/)<sup>1</sup>,
-[**Nathan Matsuda**](https://bingxuan-li.github.io/)<sup>2</sup>,
-[**Jon McElvain**](https://alexku.me/)<sup>2</sup>,
-[**Yang Zhou**](https://www.akshayjindal.com/)<sup>2</sup>,
-[**Thomas Wan**](https://www.sdiolatz.info/)<sup>2</sup>,
-[**Alexandre Chapiro**](https://kenchen10.github.io/)<sup>2&dagger;</sup>,
+[**Kenneth Chen**](https://kenchen10.github.io/)<sup>1</sup>,
+[**Nathan Matsuda**](https://www.nathanmatsuda.com)<sup>2</sup>,
+[**Jon McElvain**](https://www.linkedin.com/in/jon-mcelvain-23450225/)<sup>2</sup>,
+[**Yang Zhou**](https://scholar.google.com/citations?user=alcGReEAAAAJ&hl=en)<sup>2</sup>,
+[**Thomas Wan**](https://www.linkedin.com/in/thomas-cc-wan)<sup>2</sup>,
 [**Qi Sun**](https://qisun.me/)<sup>1&dagger;</sup>,
+[**Alexandre Chapiro**](https://achapiro.github.io/)<sup>2&dagger;</sup>
 
 
 &dagger; Equal contribution &emsp;
