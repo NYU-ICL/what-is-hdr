@@ -41,20 +41,20 @@ We thank Ken Koh for creating HDR productivity content and Maurizio Nitti for re
 If you find this project helpful to your research, please consider citing us:
 ```bibtex
 @inproceedings{
- chen2025whatishdr,
- author = {Chen, Kenneth and Matsuda, Nathan and McElvain, Jon and Zhao, Yang and Wan, Thomas and Sun, Qi and Chapiro, Alexandre},
- title = {What is HDR? Perceptual Impact of Luminance and Contrast in Immersive Displays},
- year = {2025},
- isbn = {9798400715402},
- publisher = {Association for Computing Machinery},
- address = {New York, NY, USA},
- url = {https://doi.org/10.1145/3721238.3730629},
- doi = {10.1145/3721238.3730629},
- booktitle = {Proceedings of the Special Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers},
- articleno = {40},
- numpages = {11},
- keywords = {High Dynamic Range, Displays, Visual Perception, Virtual Reality},
- series = {SIGGRAPH Conference Papers '25}
+    chen2025whatishdr,
+    author = {Chen, Kenneth and Matsuda, Nathan and McElvain, Jon and Zhao, Yang and Wan, Thomas and Sun, Qi and Chapiro, Alexandre},
+    title = {What is HDR? Perceptual Impact of Luminance and Contrast in Immersive Displays},
+    year = {2025},
+    isbn = {9798400715402},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3721238.3730629},
+    doi = {10.1145/3721238.3730629},
+    booktitle = {Proceedings of the Special Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers},
+    articleno = {40},
+    numpages = {11},
+    keywords = {High Dynamic Range, Displays, Visual Perception, Virtual Reality},
+    series = {SIGGRAPH Conference Papers '25}
  } 
 
 ```
