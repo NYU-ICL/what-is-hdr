@@ -30,8 +30,34 @@
   <sub>
   A model to predict perceptual impact (in Just-Objectionable-Differences, or JODs) is derived from HDR preference data for combinations of display contrast and peak luminance, with predictions visualized as a heatmap (left). In this plot, the baseline 0 JOD condition is set to values similar to commercially- available VR displays: 100 nits peak luminance and 64:1 contrast. In addition, we simulate 3 displays with different dynamic ranges. Our model allows us to examine the perceived improvement from increased peak luminance and contrast. For example, both display 2 and 3 provide a 1 JOD improvement over display 1. Note that HDR content cannot be displayed in a PDF format, so all images in this manuscript are tone-mapped for presentation. See our supplementary webpage for representative content.
   </sub>
-  <br><br>
-  The contrast and luminance capabilities of a display are central to the quality of the image. High dynamic range (HDR) displays have high luminance and contrast, but it can be difficult to ascertain whether a given set of characteristics qualifies for this label. This is especially unclear for new display modes, such as virtual reality (VR). This paper studies the perceptual impact of peak luminance and contrast of a display, including characteristics and use cases representative of VR. To achieve this goal, we first developed a haploscope testbed prototype display capable of achieving 1k nits peak luminance and 1M:1 contrast with high precision. We then collected a novel HDR video dataset targetting VR-relevant content types. We also implemented custom tone mapping operators to map between display parameter sets. Finally, we collected subjective preference data spanning 3 orders of magnitude in each dimension. Our data was used to fit a model, which was validated using a subjective study on an HDR VR prototype headmounted display (HMD). Our model helps provide guidance for future display design, and helps standardize the understanding of HDR.
+</div>
+
+## Abstract 
+The contrast and luminance capabilities of a display are central to the quality of the image. High dynamic range (HDR) displays have high luminance and contrast, but it can be difficult to ascertain whether a given set of characteristics qualifies for this label. This is especially unclear for new display modes, such as virtual reality (VR). This paper studies the perceptual impact of peak luminance and contrast of a display, including characteristics and use cases representative of VR. To achieve this goal, we first developed a haploscope testbed prototype display capable of achieving 1k nits peak luminance and 1M:1 contrast with high precision. We then collected a novel HDR video dataset targetting VR-relevant content types. We also implemented custom tone mapping operators to map between display parameter sets. Finally, we collected subjective preference data spanning 3 orders of magnitude in each dimension. Our data was used to fit a model, which was validated using a subjective study on an HDR VR prototype headmounted display (HMD). Our model helps provide guidance for future display design, and helps standardize the understanding of HDR.
+
+## Data & Code
+
+**Data**
+
+User study data, the results scaled to Just-Objectionable-Difference (JOD) units, and the model parameters can be found in `data/`.
+
+**Code**
+
+- `src/plot_isolines.m`: plot heatmaps, similar to Fig. 9 in the manuscript. The inputs to the function `plot_isolines` are as follows:
+  - displayNames      [string array] - names of displays to plot
+  - displayLuminances [numerical array] - peak luminances of displays to plot
+  - displayContrasts  [numerical array] - contrasts of displays to plot
+  - showIsolines      [boolean array] - whether to plot isolines for a display
+  - baseline          [numerical array] - the [peak luminance, contrast] of a baseline, where JOD is pegged to 0
+  - baselineName      [string] - name of the baseline display
+
+An example of this function being used is in `src/heatmap_plot.m`. Functions for evaluating the model are also located in `src/plot_isolines.m`.
+
+<div style="width: 90%; margin: 0 auto;">
+<img src="assets/example_result.png" width="100%" />
+<sub>
+Result of running the example script.
+</sub>
 </div>
 
 ## Acknowledgements
