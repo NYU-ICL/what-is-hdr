@@ -63,6 +63,9 @@ Functions for evaluating the model are also located in `src/plot_isolines.m`. An
 ## Acknowledgements
 We thank Ken Koh for creating HDR productivity content and Maurizio Nitti for rendering and designing HDR teddy bear scenes. Thanks to Dennis Pak for designing/constructing the haploscope and the mirror setup. Calibration of the EIZO display could not have been accomplished without the support of Yuta Asano. Thank you to Ben Mills for building the enclosure of our haploscope, for calibration of displays, as well as binocular calibration and alignment of mirrors. Thanks go to Will McCann and Xin Li, who supported the construction of the hardware and mirror fabrication. This project would not have been successful without the support of Fartun Sheygo and Alex Gherman, who conducted the main study, Nour Shoora who organized it, the user study participants for their time, and John Hill and Romain Bachy for help with logistics. Thanks go to Henry Milani for providing a PR-745 for validation of our displays, and Reza Saeedpour for support with using the device. Thank you to Dounia Hammou for providing pointers to HDR video datasets, Professor Rafał Mantiuk for the many discussions related to tone mapping and more, and Daryn Blanc-Goldhammer for comments on our work. We are grateful to Alexis Terterov for conducting the validation study, and EIZO support team for help debugging HDR displays. Thanks to Doug Lanman for discussions. Finally, thank you to Jenna Kang, Niall Williams, and Colin Groth for help with figure style. This work is partially supported by National Science Foundation grant #2225861, and a DARPA ICS program.
 
+## Contact
+Contact [Kenneth Chen](https://kenchen10.github.io) ([kennychen@nyu.edu](mailto:kennychen@nyu.edu)) with any questions.
+
 ## Citation
 If you find this project helpful to your research, please consider citing us:
 ```bibtex
