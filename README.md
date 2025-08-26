@@ -39,7 +39,10 @@ The contrast and luminance capabilities of a display are central to the quality 
 
 **Data**
 
-User study data, the results scaled to Just-Objectionable-Difference (JOD) units, and the model parameters can be found in `data/`.
+User study data, the results scaled to Just-Objectionable-Difference (JOD) units, and the model parameters can be found in `data/`:
+- `data/study_results.csv`: pairwise comparison [ASAP](https://github.com/gfxdisp/asap) study results for all participant trials.
+- `data/scaled_results.csv`: pairwise comparison results scaled to JODs using the [pwcmp](https://github.com/mantiuk/pwcmp) library.
+- `data/model_param.csv`: model parameters for both TMOs.
 
 **Code**
 
@@ -51,13 +54,10 @@ User study data, the results scaled to Just-Objectionable-Difference (JOD) units
   - baseline          [numerical array] - the [peak luminance, contrast] of a baseline, where JOD is pegged to 0
   - baselineName      [string] - name of the baseline display
 
-An example of this function being used is in `src/heatmap_plot.m`. Functions for evaluating the model are also located in `src/plot_isolines.m`.
+Functions for evaluating the model are also located in `src/plot_isolines.m`. An example of this function being used is in `src/heatmap_plot.m`, and the result of running it is shown below: 
 
 <div style="width: 90%; margin: 0 auto;">
 <img src="assets/example_result.png" width="100%" />
-<sub>
-Result of running the example script.
-</sub>
 </div>
 
 ## Acknowledgements
