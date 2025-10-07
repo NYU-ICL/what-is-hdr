@@ -44,19 +44,19 @@ The plotting code required the Matlab library [`legendUnq`](https://uk.mathworks
 **Data**
 
 User study data, the results scaled to Just-Objectionable-Difference (JOD) units, and the model parameters can be found in `data/`:
-- `data/study_results.csv`: pairwise comparison [ASAP](https://github.com/gfxdisp/asap) study results for all participant trials.
-- `data/scaled_results.csv`: pairwise comparison results scaled to JODs using the [pwcmp](https://github.com/mantiuk/pwcmp) library.
+- `data/study_results.csv`: pairwise comparison [`ASAP`](https://github.com/gfxdisp/asap) study results for all participant trials.
+- `data/scaled_results.csv`: pairwise comparison results scaled to JODs using the [`pwcmp`](https://github.com/mantiuk/pwcmp) library.
 - `data/model_param.csv`: model parameters for both TMOs.
 
 **Code**
 
 - `src/plot_isolines.m`: plot heatmaps, similar to Fig. 9 in the manuscript. The inputs to the function `plot_isolines` are as follows:
-  - displayNames      [string array] - names of displays to plot
-  - displayLuminances [numerical array] - peak luminances of displays to plot
-  - displayContrasts  [numerical array] - contrasts of displays to plot
-  - showIsolines      [boolean array] - whether to plot isolines for a display
-  - baseline          [numerical array] - the [peak luminance, contrast] of a baseline, where JOD is pegged to 0
-  - baselineName      [string] - name of the baseline display
+  - `displayNames`      [string array] - names of displays to plot
+  - `displayLuminances` [numerical array] - peak luminances of displays to plot
+  - `displayContrasts`  [numerical array] - contrasts of displays to plot
+  - `showIsolines`      [boolean array] - whether to plot isolines for a display
+  - `baseline`          [numerical array] - the [peak luminance, contrast] of a baseline, where JOD is pegged to 0
+  - `baselineName`      [string] - name of the baseline display
 
 Functions for evaluating the model are also located in `src/plot_isolines.m`. An example of this function being used is in `src/heatmap_plot.m`, and the result of running it is shown below: 
 
