@@ -37,6 +37,10 @@ The contrast and luminance capabilities of a display are central to the quality 
 
 ## Data & Code
 
+**Dependencies**
+
+The plotting code required the Matlab library [`legendUnq`](https://uk.mathworks.com/matlabcentral/fileexchange/67646-legendunq) from File Exchange.
+
 **Data**
 
 User study data, the results scaled to Just-Objectionable-Difference (JOD) units, and the model parameters can be found in `data/`:
