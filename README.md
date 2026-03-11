@@ -43,13 +43,21 @@ The plotting code required the Matlab library [`legendUnq`](https://uk.mathworks
 
 **Data**
 
-User study data, the results scaled to Just-Objectionable-Difference (JOD) units, and the model parameters can be found in `data/`:
-- `data/study_results.csv`: pairwise comparison [`ASAP`](https://github.com/gfxdisp/asap) study results for all participant trials.
-- `data/scaled_results.csv`: pairwise comparison results scaled to JODs using the [`pwcmp`](https://github.com/mantiuk/pwcmp) library.
-- `data/model_param.csv`: model parameters for both TMOs.
+User study data and the results scaled to Just-Objectionable-Difference (JOD) units for our SIGGRAPH 2025 work can be found in `data/siggraph25/`:
+- `data/siggraph25/study_results.csv`: pairwise comparison [`ASAP`](https://github.com/gfxdisp/asap) study results for all participant trials.
+- `data/siggraph25/scaled_results.csv`: pairwise comparison results scaled to JODs using the [`pwcmp`](https://github.com/mantiuk/pwcmp) library.
+Data from our HVEI 2026 direct-view HDR study are found in `data/hvei26/`.
+
+The model parameters are found in `data/model_param.csv`:
+- `fixed`: model parameters for the fixed TMO.
+- `contentAware`: model parameters for the content-aware TMO.
+- `hvei26`: model parameters for the direct-view HDR study published at HVEI 2026.
 
 **Code**
 
+Function for evaluating the model are located in `src/model.m`, and a simple example located in `src/example.m`.
+
+To plot a figure similar to our teaser, use the function below:
 - `src/plot_isolines.m`: plot heatmaps, similar to Fig. 9 in the manuscript. The inputs to the function `plot_isolines` are as follows:
   - `displayNames`      [string array] - names of displays to plot
   - `displayLuminances` [numerical array] - peak luminances of displays to plot
@@ -57,8 +65,8 @@ User study data, the results scaled to Just-Objectionable-Difference (JOD) units
   - `showIsolines`      [boolean array] - whether to plot isolines for a display
   - `baseline`          [numerical array] - the [peak luminance, contrast] of a baseline, where JOD is pegged to 0
   - `baselineName`      [string] - name of the baseline display
-
-Functions for evaluating the model are also located in `src/plot_isolines.m`. An example of this function being used is in `src/heatmap_plot.m`, and the result of running it is shown below: 
+  
+An example of this function being used to plot heatmaps is in `src/heatmap_plot.m`, and the result of running it is shown below: 
 
 <div style="width: 90%; margin: 0 auto;">
 <img src="assets/example_result.png" width="100%" />
@@ -68,10 +76,13 @@ Functions for evaluating the model are also located in `src/plot_isolines.m`. An
 We thank Ken Koh for creating HDR productivity content and Maurizio Nitti for rendering and designing HDR teddy bear scenes. Thanks to Dennis Pak for designing/constructing the haploscope and the mirror setup. Calibration of the EIZO display could not have been accomplished without the support of Yuta Asano. Thank you to Ben Mills for building the enclosure of our haploscope, for calibration of displays, as well as binocular calibration and alignment of mirrors. Thanks go to Will McCann and Xin Li, who supported the construction of the hardware and mirror fabrication. This project would not have been successful without the support of Fartun Sheygo and Alex Gherman, who conducted the main study, Nour Shoora who organized it, the user study participants for their time, and John Hill and Romain Bachy for help with logistics. Thanks go to Henry Milani for providing a PR-745 for validation of our displays, and Reza Saeedpour for support with using the device. Thank you to Dounia Hammou for providing pointers to HDR video datasets, Professor Rafał Mantiuk for the many discussions related to tone mapping and more, and Daryn Blanc-Goldhammer for comments on our work. We are grateful to Alexis Terterov for conducting the validation study, and EIZO support team for help debugging HDR displays. Thanks to Doug Lanman for discussions. Finally, thank you to Jenna Kang, Niall Williams, and Colin Groth for help with figure style. This work is partially supported by National Science Foundation grant #2225861, and a DARPA ICS program.
 
 ## Contact
-Contact [Kenneth Chen](https://kenchen10.github.io) ([kennychen@nyu.edu](mailto:kennychen@nyu.edu)) with any questions.
+Contact [Kenneth Chen](https://kenchen10.github.io) ([kennychen@nyu.edu](mailto:kennychen@nyu.edu)) with any questions about the codebase or to request dataset access.
+
+## Related Projects
+[Perceptual Impact of Peak Luminance and Contrast in Direct View HDR Display](https://kenchen10.github.io/projects/wihdirectview/index.html), HVEI 2026. Kenneth Chen*, Yunxiang Zhang*, Qi Sun, Alexandre Chapiro.
 
 ## Citation
-If you find this project helpful to your research, please consider citing us:
+If you find this project helpful to your research, please consider citing the following papers:
 ```bibtex
 @inproceedings{
     chen2025whatishdr,
@@ -89,5 +100,22 @@ If you find this project helpful to your research, please consider citing us:
     keywords = {High Dynamic Range, Displays, Visual Perception, Virtual Reality},
     series = {SIGGRAPH Conference Papers '25}
  } 
+
+```
+
+```bibtex
+@article{
+    chen2026wihdirectview,
+    author = {Kenneth Chen and Yunxiang Zhang and Qi Sun and Alexandre Chapiro},
+    title = {Perceptual Impact of Peak Luminance and Contrast in Direct View HDR Display},
+    journal = {Electronic Imaging},
+    volume = {38},
+    number = {10},
+    pages = {222-1--222-1},
+    keywords = {Applied Perception, High Dynamic Range, Display Technology, Tone Mapping, Psychophysics},
+    doi = {10.2352/EI.2026.38.10.HVEI-222},
+    url = {https://library.imaging.org/ei/articles/38/10/HVEI-222},
+    year = {2026},
+} 
 
 ```

@@ -4,6 +4,6 @@ displayLuminances = [258, 1000, 400, 500, 600, 1000, 1400];
 displayContrasts = [147, 1000000, 1300, 7000, 8000, 30000, 50000];
 showIsolines = [true, false, true, false, true, false, false];
 baseline = [100, 64];
-baselineName = 'Commercial VR';
+baselineName = 'Typical VR';
 
 plot_isolines(displayNames, displayLuminances, displayContrasts, showIsolines, baseline, baselineName);

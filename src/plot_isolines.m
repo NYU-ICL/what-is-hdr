@@ -20,8 +20,8 @@ function plot_isolines( displayNames, displayLuminances, displayContrasts, showI
     y_range = logspace(log10(ylims(1)), log10(ylims(2)), numSamples);
     [X, Y] = meshgrid(x_range, y_range); % heatmap grid
 
-    offset = M(baseline(1)/baseline(2), baseline(1), params); % evaluate baseline
-    Z = M(Y./X, Y, params) - offset; % compute model on grid
+    offset = model(baseline(1)/baseline(2), baseline(1), params); % evaluate baseline
+    Z = model(Y./X, Y, params) - offset; % compute model on grid
 
     % contours
     [C,h] = contourf(X, Y, Z, numSamples, 'LineStyle', 'none');
@@ -39,7 +39,7 @@ function plot_isolines( displayNames, displayLuminances, displayContrasts, showI
     if ~isempty(displayNames)
         iso = [];
         for i = 1:length(displayNames)
-            jodTemp = M(displayLuminances(i)/displayContrasts(i), displayLuminances(i), params);
+            jodTemp = model(displayLuminances(i)/displayContrasts(i), displayLuminances(i), params);
             iso(end+1) = jodTemp-offset;
         end
 
@@ -86,15 +86,4 @@ function plot_isolines( displayNames, displayLuminances, displayContrasts, showI
     set(gca, 'fontsize', fontsize);
     xlim(xlims);
     ylim(ylims);
-end
-
-function Z = M( X, Y, params )
-    % evaluate model
-    Z = (log10(Y).^params.k3).*(params.k1-params.k2.*X.^.5)-params.k4;
-end
-
-function data = loadModelParams( tmo )
-    % load model parameters
-    T = readtable('../data/model_param.csv');
-    data = T(strcmp(T.tmo, tmo), :);
 end
