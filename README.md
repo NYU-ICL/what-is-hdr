@@ -55,6 +55,8 @@ The model parameters are found in `data/model_param.csv`:
 
 **Code**
 
+Quick start with using our model can be found in `src/eval_model.py`.
+
 Function for evaluating the model are located in `src/model.m`, and a simple example located in `src/example.m`.
 
 To plot a figure similar to our teaser, use the function below:
